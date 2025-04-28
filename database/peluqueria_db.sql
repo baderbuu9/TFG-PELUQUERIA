@@ -1,5 +1,4 @@
 -- Crear la base de datos
-CREATE DATABASE peluqueria_db;
 USE peluqueria_db;
 
 -- Configuración para días no laborables (sábados y domingos bloqueados)
@@ -134,19 +133,6 @@ CREATE TABLE productos_pedido (
 -- Crear un usuario administrador por defecto
 INSERT INTO usuarios (email, contraseña, nombre, apellidos, telefono, rol)
 VALUES ('admin@peluqueria.com', '$2y$10$YQdG2yhFNKFZu3ReSohAKuJ3IFAUMcpEYQqRsHyPlFCaV02U2pRAe', 'Administrador', 'Sistema', '600000000', 'administrador');
-
--- Crear algunos servicios de ejemplo (limitado a 10 servicios para TFG)
-INSERT INTO servicios (nombre, descripcion, precio, duracion, disponible_domicilio, recargo_domicilio, imagen) VALUES
-('Corte de pelo', 'Corte de pelo clásico masculino', 15.00, 30, TRUE, 5.00, 'corte.jpg'),
-('Afeitado', 'Afeitado tradicional con navaja', 12.00, 25, TRUE, 5.00, 'afeitado.jpg'),
-('Arreglo de barba', 'Perfilado y arreglo de barba', 10.00, 20, TRUE, 5.00, 'barba.jpg'),
-('Tinte', 'Tinte de cabello', 25.00, 60, FALSE, 0.00, 'tinte.jpg'),
-('Lavado y peinado', 'Lavado y peinado profesional', 8.00, 15, TRUE, 3.00, 'lavado.jpg'),
-('Corte y barba', 'Corte de pelo y arreglo de barba', 22.00, 45, TRUE, 7.00, 'corte_barba.jpg'),
-('Fade', 'Degradado moderno', 18.00, 35, TRUE, 5.00, 'fade.jpg'),
-('Corte niño', 'Corte para niños hasta 12 años', 12.00, 25, TRUE, 5.00, 'nino.jpg'),
-('Tratamiento capilar', 'Tratamiento hidratante para cuero cabelludo', 20.00, 40, FALSE, 0.00, 'tratamiento.jpg'),
-('Diseño de líneas', 'Diseño personalizado con máquina', 8.00, 15, TRUE, 3.00, 'lineas.jpg');
 
 -- Crear algunos productos de ejemplo
 INSERT INTO productos (nombre, descripcion, precio, stock, imagen, categoria) VALUES
