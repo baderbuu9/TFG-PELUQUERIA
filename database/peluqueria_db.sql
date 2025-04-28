@@ -47,7 +47,6 @@ CREATE TABLE servicios (
     precio DECIMAL(6,2) NOT NULL,
     duracion INT NOT NULL COMMENT 'Duración en minutos',
     disponible_domicilio BOOLEAN DEFAULT FALSE,
-    recargo_domicilio DECIMAL(5,2) DEFAULT 0.00,
     imagen VARCHAR(255)
 );
 
@@ -156,6 +155,3 @@ INSERT INTO productos (nombre, descripcion, precio, stock, imagen, categoria) VA
 ('Aceite para barba', 'Aceite hidratante para barba', 15.50, 10, 'aceite.jpg', 'Barbería'),
 ('Espuma de afeitar', 'Espuma para un afeitado suave', 7.25, 25, 'espuma.jpg', 'Afeitado'),
 ('Kit de barbería', 'Kit completo para el cuidado de la barba', 29.99, 5, 'kit.jpg', 'Barbería');
-
--- Insertar configuración inicial
-INSERT INTO configuracion_negocio (id) VALUES (1);
