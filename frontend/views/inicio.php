@@ -14,7 +14,7 @@ incluirTemplate('header');
 							<h4 class="text-white text-uppercase mb-4 animated slideInDown">
                             <i class="fa fa-home text-primary me-3"></i>Comodidad y Estilo en tu Hogar</h4>
                         <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i class="fa fa-phone-alt text-primary me-3"></i>+34 919 90 01 99</h4>
-                        <a href="index.php?pagina=citaprevia" class="btn btn-primary rounded-0 py-2 px-lg-4 mt-3 animated slideInDown">SOLICITA TU SERVICIO A DOMICILIO<i class="fa fa-arrow-right ms-3"></i></a>
+                        <a href="index.php?pagina=cita" class="btn btn-primary rounded-0 py-2 px-lg-4 mt-3 animated slideInDown" >SOLICITA TU SERVICIO A DOMICILIO<i class="fa fa-arrow-right ms-3"></i></a>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ incluirTemplate('header');
                             <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">Te Dejaremos un Look Increíble</h1>
                             <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i class="fa fa-map-marker-alt text-primary me-3"></i>Calle Juan de Austria, 6, 28982 Parla, Madrid</h4>
                             <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i class="fa fa-phone-alt text-primary me-3"></i>+34 919 90 01 99</h4>
-							<a href="index.php?pagina=citaprevia" class="btn btn-primary rounded-0 py-2 px-lg-4 mt-3 animated slideInDown">RESERVA TU CITA<i class="fa fa-arrow-right ms-3"></i></a>
+                            <a href="index.php?pagina=cita" class="btn btn-primary rounded-0 py-2 px-lg-4 mt-3 animated slideInDown">RESERVA TU CITA<i class="fa fa-arrow-right ms-3"></i></a>
                         </div>					
                     </div>
                 </div>

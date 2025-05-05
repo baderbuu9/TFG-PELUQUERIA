@@ -1,5 +1,4 @@
 <?php
-
 // Leer el archivo de configuración
 $config = parse_ini_file('config.ini');
 
@@ -10,7 +9,25 @@ $dbname = $config['dbname'];
 $usuario = $config['usuario'];
 $password = $config['password'];
 
-// Crear la conexión PDO simple
 $pdo = new PDO("mysql:host={$host};port={$port};dbname={$dbname}", $usuario, $password);
 
+
+// Verificar si la clase ya existe antes de declararla
+if (!class_exists('PeluqueriaDB')) {
+    class PeluqueriaDB {
+        private $pdo;
+
+        public function __construct($pdo) {
+            $this->pdo = $pdo;
+        }
+
+        // Función para obtener los servicios de la base de datos
+        public function retornarServicios() {
+            $sql = "SELECT * FROM servicios";
+            $sentencia = $this->pdo->prepare($sql);
+            $sentencia->execute();
+            return $sentencia;
+        }
+    }
+}
 ?>
