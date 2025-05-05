@@ -10,8 +10,8 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 'inicio';
 
 // Estructura básica de enrutamiento
 switch ($pagina) {
-        case 'inicio':
-                include 'frontend/views/inicio.php';
+        case 'inicio': // nombre del archivo .php pero sin .php
+                include 'frontend/views/inicio.php'; //ruta del archivo
                 break;
         case 'registro_cliente':
                 include 'frontend/views/clientes/registro_cliente.php';
@@ -21,6 +21,15 @@ switch ($pagina) {
                 break;
         case 'nosotros':
                 include 'frontend/views/nosotros.php';
+                break;
+		case 'contacto':
+                include 'frontend/views/contacto.php'; 
+                break;
+		case 'cita':
+                include 'frontend/views/cita.php'; 
+                break;	
+		default:
+                include 'frontend/views/404.php';
                 break;
 }
 ?>

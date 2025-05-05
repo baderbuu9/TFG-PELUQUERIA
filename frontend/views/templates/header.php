@@ -78,9 +78,9 @@
                         <a href="index.php?pagina=404" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="index.php?pagina=contact" class="nav-item nav-link">Contacto</a>
+                <a href="index.php?pagina=contacto" class="nav-item nav-link">Contacto</a>
             </div>
-            <a href="index.php?pagina=citaprevia" class="btn btn-primary rounded-0 py-2 px-lg-4 d-none d-lg-block">CITA PREVIA<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="index.php?pagina=cita" class="btn btn-primary rounded-0 py-2 px-lg-4 d-none d-lg-block">CITA PREVIA<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
