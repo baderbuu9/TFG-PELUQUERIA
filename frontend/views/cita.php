@@ -2,16 +2,15 @@
     // Incluir el encabezado
     incluirTemplate('header');
 
-    // Importar la clase PeluqueriaDB
+    // Importar el archivo de configuración de la base de datos
     require_once 'backend/config/db.php';
 
-    // En db.php ya se ha creado la conexión y la variable $pdo
-    // Solo necesitamos crear una instancia de PeluqueriaDB con esa conexión
     $peluqueria = new PeluqueriaDB($pdo);
 
     // Obtener los servicios
-	$sentencia = $peluqueria->retornarServicios();	
+    $sentencia = $peluqueria->retornarServicios();	
 ?>
+
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">

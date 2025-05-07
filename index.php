@@ -22,13 +22,19 @@ switch ($pagina) {
         case 'nosotros':
                 include 'frontend/views/nosotros.php';
                 break;
-		case 'contacto':
+	case 'contacto':
                 include 'frontend/views/contacto.php'; 
                 break;
-		case 'cita':
+	case 'cita':
                 include 'frontend/views/cita.php'; 
                 break;	
-		default:
+        case 'productos':
+                include 'frontend/views/productos.php'; 
+                break;
+        case 'detalle_producto':
+                include 'frontend/views/detalle_producto.php'; 
+                break;
+	default:
                 include 'frontend/views/404.php';
                 break;
 }
