@@ -28,6 +28,22 @@ if (!class_exists('PeluqueriaDB')) {
             $sentencia->execute();
             return $sentencia;
         }
+
+        // Función para retornar productos 
+        public function retornarProductos() {
+            $sql = "SELECT id_producto, nombre, precio, imagen FROM productos";
+            $sentencia = $this->pdo->prepare($sql);
+            $sentencia->execute();
+            return $sentencia;
+        }
+
+        // Función para retornar un producto específico por ID
+        public function retornarProductoPorId($id) {
+            $sql = "SELECT id_producto, nombre, precio, imagen FROM productos WHERE id_producto = :id"; 
+            $sentencia = $this->pdo->prepare($sql);
+            $sentencia->execute([':id' => $id]);
+            return $sentencia;
+        }
     }
 }
 ?>

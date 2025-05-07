@@ -3,12 +3,7 @@
     // Incluir el encabezado
     incluirTemplate('header');
 
-    // Importar la clase PeluqueriaDB
-    require $_SERVER['DOCUMENT_ROOT'] . '/TFG/TFG-PELUQUERIA/backend/config/db.php';
-
-
-    // En db.php ya se ha creado la conexión y la variable $pdo
-    // Solo necesitamos crear una instancia de PeluqueriaDB con esa conexión
+    //Conexión PeluqueriaDB 
     $peluqueria = new PeluqueriaDB($pdo);
 
     // Obtener los servicios

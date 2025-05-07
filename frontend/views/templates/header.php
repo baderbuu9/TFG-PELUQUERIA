@@ -67,6 +67,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link active">Inicio</a>
                 <a href="index.php?pagina=nosotros" class="nav-item nav-link">Sobre Nosotros</a>
+                <a href="index.php?pagina=productos" class="nav-item nav-link">Nuestros Productos</a>
                 <a href="index.php?pagina=service" class="nav-item nav-link">Servicios</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
