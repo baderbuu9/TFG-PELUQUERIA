@@ -24,7 +24,7 @@ incluirTemplate('header');
                     <p class="d-inline-flex bg-dark text-primary py-1 px-4 me-auto">Área de Clientes</p>
                     <h1 class="text-uppercase mb-4">Accede a tu Cuenta</h1>
                     
-                    <form action="func_login.php" method="POST">
+                    <form action="backend/func_login.php" method="POST">
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-floating">

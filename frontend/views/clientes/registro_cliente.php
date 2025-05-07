@@ -1,4 +1,5 @@
 <?php
+// Incluir el encabezado
 incluirTemplate('header');
 ?>
 
@@ -24,11 +25,11 @@ incluirTemplate('header');
                 <p class="d-inline-flex bg-dark text-primary py-1 px-4 me-auto">Únete a Nosotros</p>
                 <h1 class="text-uppercase mb-4">Crea Tu Cuenta</h1>
 				
-                <form action="func_registro_cliente.php" method="POST">
+                <form action="backend/func_registro_cliente.php" method="POST">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control bg-transparent text-white" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+                                <input type="text" class="form-control bg-transparent text-white <?php echo isset($_SESSION['errores']['nombre']) ? 'is-invalid' : ''; ?>" id="nombre" name="nombre" placeholder="Tu Nombre" required>
                                 <label for="nombre">Nombre</label>
                             </div>
                         </div>
@@ -51,17 +52,23 @@ incluirTemplate('header');
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="form-floating">
-                                <input type="password" class="form-control bg-transparent text-white" id="password" name="password" placeholder="Contraseña" required>
-                                <label for="password">Contraseña</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <input type="password" class="form-control bg-transparent text-white" id="confirmar-password" name="confirmar_password" placeholder="Confirmar Contraseña" required>
-                                <label for="confirmar-password">Confirmar Contraseña</label>
-                            </div>
-                        </div>
+							<div class="form-floating position-relative">
+								<input type="password" class="form-control bg-transparent text-white" id="password" name="password" placeholder="Contraseña" required>
+								<label for="password">Contraseña</label>
+								<span class="position-absolute top-50 end-0 translate-middle-y pe-3" style="cursor: pointer;">
+									<i class="fa fa-eye-slash toggle-password" data-target="password"></i>
+								</span>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-floating position-relative">
+								<input type="password" class="form-control bg-transparent text-white" id="confirmar-password" name="confirmar_password" placeholder="Confirmar Contraseña" required>
+								<label for="confirmar-password">Confirmar Contraseña</label>
+								<span class="position-absolute top-50 end-0 translate-middle-y pe-3" style="cursor: pointer;">
+									<i class="fa fa-eye-slash toggle-password" data-target="confirmar-password"></i>
+								</span>
+							</div>
+						</div>
 
                         <!-- Campo oculto para enviar rol como cliente -->
                         <input type="hidden" name="rol" value="cliente">
@@ -132,6 +139,29 @@ incluirTemplate('header');
         </div>
     </div>
     <!-- Benefits End -->
+	
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionar todos los iconos de ojo
+    const toggleButtons = document.querySelectorAll('.toggle-password');
+    
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Obtener el campo de contraseña asociado
+            const targetId = this.getAttribute('data-target');
+            const passwordField = document.getElementById(targetId);
+            
+            // Cambiar el tipo de campo
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+            
+            // Cambiar el icono
+            this.classList.toggle('fa-eye-slash');
+            this.classList.toggle('fa-eye');
+        });
+    });
+});
+</script>
 
 <?php
 incluirTemplate('footer');

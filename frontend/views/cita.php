@@ -1,14 +1,16 @@
-    <!-- Encabezado de la Página Inicio --> 
-    <?php
+<?php
     // Incluir el encabezado
     incluirTemplate('header');
 
-    //Conexión PeluqueriaDB 
+    // Importar el archivo de configuración de la base de datos
+    require_once 'backend/config/db.php';
+
     $peluqueria = new PeluqueriaDB($pdo);
 
     // Obtener los servicios
-    $sentencia = $peluqueria->retornarServicios();
-    ?>
+    $sentencia = $peluqueria->retornarServicios();	
+?>
+
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -59,7 +61,7 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <select class="form-control bg-transparent text-white" id="hora" name="hora" required>
-                                        <option value="" disabled selected>Seleccione una hora</option>
+                                        <option value="" disabled selected></option>
                                         <option value="09:00">09:00</option>
                                         <option value="09:20">09:20</option>
                                         <option value="09:40">09:40</option>
@@ -104,8 +106,8 @@
                             <!-- Servicio -->
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <select class="form-select bg-transparent text-white" id="servicio" name="servicio" required>
-                                        <option value="" disabled selected>Seleccione un servicio</option>
+                                    <select class="form-control bg-transparent text-white" id="servicio" name="servicio" required>
+                                        <option value="" disabled selected></option>
                                         <?php while ($servicio = $sentencia->fetch(PDO::FETCH_ASSOC)) { ?>
                                             <option value="<?= $servicio['id_servicio'] ?>"><?= $servicio['nombre'] ?></option>
                                         <?php } ?>
